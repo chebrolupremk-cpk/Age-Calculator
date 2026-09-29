@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dateInput.max = `${todayYear}-${todayMonth}-${todayDay}`;
 
-
     calculateBtn.addEventListener("click", calculateAge);
 
 
@@ -123,8 +122,17 @@ document.addEventListener("DOMContentLoaded", () => {
             "Saturday"
         ];
 
+        // Calculate weekday directly from the selected date
+        const birthDateUTC = new Date(
+            Date.UTC(
+                birthYear,
+                birthMonth,
+                birthDay
+            )
+        );
+
         const bornDay =
-            dayNames[birthDate.getDay()];
+            dayNames[birthDateUTC.getUTCDay()];
 
 
         // ==============================
