@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Games 🎮</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVIGATION
+         ============================== -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Age Calculator
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="riddles.html">Riddles 🧠</a>
+            <a href="games.html">Mini Games 🎮</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ==============================
+         MINI GAMES PAGE
+         ============================== -->
+
+    <main class="games-page">
+
+        <!-- ==========================
+             GAMES HOME
+             ========================== -->
+
+        <section id="gamesHome">
+
+            <div class="games-header">
+
+                <h1>🎮 Mini Games</h1>
+
+                <p>
+                    Play different games, challenge yourself,
+                    and collect coins!
+                </p>
+
+                <div class="wallet">
+                    🪙 Coins:
+                    <span id="gameCoins">0</span>
+                </div>
+
+            </div>
+
+
+            <!-- ==========================
+                 SEARCH + CATEGORY
+                 ========================== -->
+
+            <div class="games-tools">
+
+                <input
+                    type="search"
+                    id="gameSearch"
+                    placeholder="🔎 Search games..."
+                    autocomplete="off"
+                >
+
+                <select id="gameCategory">
+
+                    <option value="All">
+                        🎮 All Games
+                    </option>
+
+                    <option value="Puzzle">
+                        🧩 Puzzle
+                    </option>
+
+                    <option value="Math">
+                        🔢 Math
+                    </option>
+
+                    <option value="Word">
+                        🔤 Word
+                    </option>
+
+                    <option value="Memory">
+                        🧠 Memory
+                    </option>
+
+                    <option value="Action">
+                        ⚡ Action
+                    </option>
+
+                    <option value="Quiz">
+                        ❓ Quiz
+                    </option>
+
+                    <option value="Classic">
+                        🎲 Classic
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ==========================
+                 GAME SETTINGS
+                 ========================== -->
+
+            <div class="game-settings">
+
+                <button
+                    id="soundToggle"
+                    type="button"
+                >
+                    🔊 Sound: ON
+                </button>
+
+                <button
+                    id="musicToggle"
+                    type="button"
+                >
+                    🎵 Music: ON
+                </button>
+
+            </div>
+
+
+            <!-- ==========================
+                 GAME GRID
+                 ========================== -->
+
+            <div
+                id="gamesGrid"
+                class="games-grid"
+            ></div>
+
+            <div
+                id="gamesMessage"
+                class="game-notice"
+            ></div>
+
+        </section>
+
+
+        <!-- ==============================
+             SELECTED GAME SCREEN
+             ============================== -->
+
+        <section
+            id="gameScreen"
+            hidden
+        >
+
+            <div class="game-title-area">
+
+                <h2 id="gameTitle">
+                    Game
+                </h2>
+
+                <p id="gameDescription"></p>
+
+            </div>
+
+
+            <!-- Game content is inserted here -->
+
+            <div id="gameArea"></div>
+
+
+            <!-- ==========================
+                 GAME BUTTONS
+                 ========================== -->
+
+            <div class="game-buttons">
+
+                <button
+                    id="backButton"
+                    class="small-game-btn"
+                    type="button"
+                    onclick="backToGames()"
+                >
+                    ← Back to Games
+                </button>
+
+                <button
+                    id="restartButton"
+                    class="small-game-btn"
+                    type="button"
+                    onclick="restartGame()"
+                >
+                    🔄 Restart
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         GAME JAVASCRIPT
+         ============================== -->
+
+    <script src="games.js"></script>
+
+</body>
+</html>

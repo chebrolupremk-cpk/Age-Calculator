@@ -1,51 +1,88 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-
     min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     background: #f2f4f7;
-
     padding-top: 80px;
+    overflow-x: hidden;
 }
 
 
-/* Calculator */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+
+/* =========================================================
+   AGE CALCULATOR
+   ========================================================= */
 
 .calculator {
     width: 400px;
+    max-width: calc(100% - 40px);
+    margin: 30px auto;
     padding: 35px;
-
-    background: #000000;
-    color: #ffffff;
-
+    background: #000;
+    color: #fff;
     border-radius: 15px;
-
     text-align: center;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
 }
-
-
-/* Presented By */
 
 .presented-by {
     margin-bottom: 8px;
-
-    text-align: center;
-
     font-size: 16px;
-
     font-weight: bold;
-
     color: #1a4d8f;
 }
 
@@ -53,208 +90,92 @@ body {
     display: block;
 }
 
-.presented-by span:last-child {
-    text-align: center;
-}
-
-
-/* Main Heading */
-
 h1 {
     margin-bottom: 10px;
-
-    color: #00FF00;
+    color: #00ff00;
 }
-
-
-/* Section Headings */
 
 h2,
 h3 {
     color: skyblue;
 }
 
-
-/* Normal Text */
-
 .calculator p,
 .calculator label,
 .info-section li {
-    color: #ffffff;
+    color: #fff;
 }
-
-
-/* Input */
 
 input {
     width: 100%;
-
     padding: 12px;
-
     margin: 15px 0;
-
     font-size: 16px;
-
     border: 1px solid #ccc;
-
     border-radius: 8px;
-
-    background: #ffffff;
-
-    color: #000000;
+    background: #fff;
+    color: #000;
 }
-
-
-/* Button */
 
 button {
     width: 100%;
-
     padding: 12px;
-
     font-size: 16px;
-
     border: none;
-
     border-radius: 8px;
-
     cursor: pointer;
-
-    background: #333333;
-
-    color: #ffffff;
+    background: #333;
+    color: #fff;
 }
 
 button:hover {
-    opacity: 0.85;
-}
-
-
-/* Result */
-
-#result {
-    margin-top: 25px;
-
-    font-size: 20px;
-
-    font-weight: bold;
-
-    color: #ffffff;
+    opacity: .85;
 }
 
 .result-box {
     margin-top: 25px;
-
     text-align: left;
 }
 
-
-/* Result Cards */
-
 .result-card {
     padding: 15px;
-
     margin-bottom: 12px;
-
-    background: #111111;
-
+    background: #111;
     border-radius: 10px;
-
-    border: 1px solid #333333;
+    border: 1px solid #333;
 }
 
 .result-title {
     font-size: 14px;
-
-    color: #cccccc;
-
+    color: #ccc;
     margin-bottom: 5px;
 }
 
 .result-value {
     font-size: 20px;
-
     font-weight: bold;
-
-    color: #ffffff;
+    color: #fff;
 }
 
 
-/* Navigation */
-
-.navbar {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    padding: 15px 30px;
-
-    background: white;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 20px;
-
-    font-weight: bold;
-
-    color: #222222;
-
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-
-    gap: 20px;
-}
-
-.nav-links a {
-    color: #555555;
-
-    text-decoration: none;
-
-    font-size: 15px;
-}
-
-.nav-links a:hover {
-    color: #000000;
-}
-
-
-/* Information Section */
+/* =========================================================
+   INFORMATION SECTION
+   ========================================================= */
 
 .info-section {
     margin-top: 35px;
-
     text-align: left;
 }
 
 .info-section h2 {
     margin-top: 30px;
-
     margin-bottom: 10px;
-
     font-size: 22px;
 }
 
 .info-section h3 {
     margin-top: 20px;
-
     margin-bottom: 5px;
-
     font-size: 18px;
 }
 
@@ -269,17 +190,646 @@ button:hover {
 }
 
 
-/* Mobile Responsive Design */
+/* =========================================================
+   RIDDLES / OLD GAME PAGE
+   ========================================================= */
+
+.game-page {
+    width: 900px;
+    max-width: calc(100% - 40px);
+    margin: 30px auto;
+    padding: 35px;
+    background: #000;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+.wallet {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    background: #171717;
+    border: 1px solid #555;
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.difficulty-tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.difficulty-tabs span {
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #191919;
+    font-size: 13px;
+}
+
+.riddle-card {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 15px;
+}
+
+.riddle-number {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.difficulty-badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #222;
+    color: #00ff00;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.riddle-question {
+    margin: 20px 0;
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.riddle-input {
+    margin: 5px 0 15px;
+}
+
+.riddle-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.primary-btn {
+    background: #0066cc;
+}
+
+.hint-btn {
+    background: #555;
+}
+
+.hint-btn:disabled,
+.primary-btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.hint-box {
+    min-height: 0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background: #242424;
+    color: #ffd700;
+}
+
+.riddle-message {
+    min-height: 28px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.next-btn {
+    display: none;
+    margin-top: 15px;
+    background: #008000;
+}
+
+.riddle-progress {
+    color: #ccc;
+}
+
+
+/* =========================================================
+   MINI GAMES HOME
+   ========================================================= */
+
+.games-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.games-header {
+    margin-bottom: 20px;
+}
+
+.games-header h1 {
+    margin: 0 0 8px;
+    color: #00ff00;
+}
+
+.games-header p {
+    color: #555;
+}
+
+
+/* =========================================================
+   GAME SEARCH + CATEGORY
+   ========================================================= */
+
+.games-tools {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 0 20px;
+}
+
+.games-tools input,
+.games-tools select {
+    width: auto;
+    min-width: 200px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   GAME CARDS
+   ========================================================= */
+
+.games-grid,
+#gamesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.game-card {
+    padding: 20px 15px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 14px;
+    cursor: pointer;
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .18);
+}
+
+.game-card h3 {
+    margin: 8px 0;
+    color: skyblue;
+}
+
+.game-card p {
+    color: #ccc;
+    min-height: 38px;
+}
+
+.game-card .game-category {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background: #222;
+    color: #ffd700;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SELECTED GAME SCREEN
+   ========================================================= */
+
+/*
+   IMPORTANT:
+   There is NO separate games.css file.
+   Everything for games is controlled here.
+*/
+
+#gameScreen {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto !important;
+    padding: 0 15px 30px !important;
+    text-align: center;
+    position: relative !important;
+    top: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    box-sizing: border-box;
+}
+
+
+/* GAME TITLE */
+
+#gameScreen .game-title-area {
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+}
+
+#gameScreen .game-title-area h2 {
+    margin: 0 0 8px !important;
+}
+
+
+/* GAME CONTENT */
+
+#gameScreen #gameArea {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto !important;
+    padding: 8px !important;
+    position: relative !important;
+    top: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACK + RESTART
+   ========================================================= */
+
+#gameScreen .game-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 14px 0 0 !important;
+    padding: 0 !important;
+    position: static !important;
+}
+
+#gameScreen .game-buttons button,
+#gameScreen .small-game-btn {
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 160px !important;
+    padding: 6px 12px !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    position: static !important;
+}
+
+
+/* =========================================================
+   GAME SCREEN VISIBILITY
+   ========================================================= */
+
+body.game-only {
+    overflow-x: hidden;
+}
+
+body.game-only .games-page {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+body.game-only #gamesHome {
+    display: none !important;
+}
+
+body.game-only #gameScreen {
+    display: block !important;
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   GAME CONTROLS
+   ========================================================= */
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.game-buttons button {
+    width: auto;
+}
+
+
+/* =========================================================
+   COMMON GAME BOX
+   ========================================================= */
+
+.game-box {
+    width: 100%;
+    max-width: 800px;
+    margin: 15px auto;
+    padding: 20px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 14px;
+    color: #fff;
+}
+
+.game-box button {
+    margin-top: 8px;
+}
+
+.game-score {
+    color: #ffd700;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.game-question {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.game-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.game-options button {
+    width: 100%;
+}
+
+.game-input {
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+
+/* =========================================================
+   MEMORY / TILE BOARDS
+   ========================================================= */
+
+.memory-board,
+.tile-board {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.memory-card,
+.tile {
+    width: 70px;
+    height: 70px;
+    background: #222;
+    border: 1px solid #555;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TIC TAC TOE
+   ========================================================= */
+
+.tic-board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.tic-cell {
+    width: 80px;
+    height: 80px;
+    background: #111;
+    border: 1px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   COLOR / TARGET GAMES
+   ========================================================= */
+
+.color-target,
+.target-area {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    margin: 20px auto;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.target {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   NUMBER / WORD GAME AREAS
+   ========================================================= */
+
+.number-buttons,
+.word-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px auto;
+    max-width: 700px;
+}
+
+.number-buttons button,
+.word-buttons button {
+    width: auto;
+    min-width: 70px;
+}
+
+
+/* =========================================================
+   REACTION GAME
+   ========================================================= */
+
+.reaction-area {
+    width: 100%;
+    max-width: 700px;
+    height: 250px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   STOPWATCH
+   ========================================================= */
+
+.stopwatch-display {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #00ff00;
+}
+
+
+/* =========================================================
+   DICE / COIN
+   ========================================================= */
+
+.dice-display,
+.coin-display {
+    font-size: 80px;
+    margin: 20px auto;
+}
+
+
+/* =========================================================
+   ROCKET GAME
+   ========================================================= */
+
+.rocket-area {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    margin: 20px auto;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.rocket {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+}
+
+
+/* =========================================================
+   TREASURE GAME
+   ========================================================= */
+
+.treasure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 8px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.treasure-cell {
+    width: 60px;
+    height: 60px;
+    background: #222;
+    border: 1px solid #555;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   SETTINGS
+   ========================================================= */
+
+.game-settings {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.game-settings button {
+    width: auto;
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .games-grid,
+    #gamesGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .game-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 110px 20px 20px 20px;
+        padding-top: 120px;
     }
 
-    .calculator {
-        width: 100%;
+    .navbar {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
 
+    .nav-links {
+        gap: 10px;
+    }
+
+    .calculator,
+    .game-page {
         padding: 25px 20px;
     }
 
@@ -287,23 +837,81 @@ button:hover {
         font-size: 28px;
     }
 
-    .result-value {
-        font-size: 18px;
+    .riddle-buttons {
+        flex-direction: column;
     }
 
-    .navbar {
-        padding: 12px 15px;
+    .games-page {
+        padding: 10px 8px;
+    }
 
-        flex-direction: column;
-
+    .games-grid,
+    #gamesGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
     }
 
-    .nav-links {
-        gap: 12px;
+    #gameScreen {
+        padding: 0 8px 24px !important;
+    }
 
-        flex-wrap: wrap;
+    #gameScreen .game-buttons button,
+    #gameScreen .small-game-btn {
+        max-width: 145px !important;
+        padding: 6px 9px !important;
+        font-size: 12px !important;
+    }
 
-        justify-content: center;
+    .game-options {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-board,
+    .tile-board {
+        grid-template-columns: repeat(4, 55px);
+        gap: 7px;
+    }
+
+    .memory-card,
+    .tile {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .tic-board {
+        grid-template-columns: repeat(3, 65px);
+        grid-template-rows: repeat(3, 65px);
+    }
+
+    .tic-cell {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+    }
+
+    .treasure-grid {
+        grid-template-columns: repeat(5, 48px);
+        gap: 6px;
+    }
+
+    .treasure-cell {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .reaction-area {
+        height: 200px;
+        font-size: 20px;
+    }
+
+    .stopwatch-display {
+        font-size: 35px;
+    }
+
+    .dice-display,
+    .coin-display {
+        font-size: 60px;
     }
 }

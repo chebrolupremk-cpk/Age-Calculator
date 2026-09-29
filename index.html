@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +12,13 @@
         content="Use our free Age Calculator to calculate your exact age in years, months and days. Find your day of birth, next birthday and total days lived.">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
+
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
 
     <nav class="navbar">
 
@@ -25,42 +27,103 @@
         </a>
 
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="riddles.html">
+                Riddles 🧠
+            </a>
+
+            <a href="games.html">
+                Mini Games 🎮
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
         </div>
 
     </nav>
 
+
+    <!-- =========================
+         AGE CALCULATOR
+         ========================= -->
+
     <main class="calculator">
 
         <p class="presented-by">
-            <span>Chebrolu Prem Kumar</span>
-            <span>Presents</span>
+
+            <span>
+                Chebrolu Prem Kumar
+            </span>
+
+            <span>
+                Presents
+            </span>
+
         </p>
 
-        <h1>AGE CALCULATOR</h1>
+
+        <h1>
+            AGE CALCULATOR
+        </h1>
+
 
         <p>
             Calculate your exact age in years, months and days.
         </p>
 
+
         <label for="dateOfBirth">
             Enter your date of birth
         </label>
 
-        <input type="date" id="dateOfBirth">
 
-        <button id="calculateBtn">
+        <input
+            type="date"
+            id="dateOfBirth"
+        >
+
+
+        <button
+            id="calculateBtn"
+            type="button"
+        >
             Calculate Age
         </button>
 
-        <div id="result" class="result-box"></div>
+
+        <!-- =========================
+             RESULT
+             ========================= -->
+
+        <div
+            id="result"
+            class="result-box"
+        ></div>
+
+
+        <!-- =========================
+             INFORMATION
+             ========================= -->
 
         <section class="info-section">
 
-            <h2>About Age Calculator</h2>
+            <h2>
+                About Age Calculator
+            </h2>
 
             <p>
                 Our Age Calculator helps you calculate your age accurately
@@ -69,39 +132,80 @@
                 such as your day of birth and upcoming birthday.
             </p>
 
-            <h2>How to Use the Age Calculator</h2>
+
+            <h2>
+                How to Use the Age Calculator
+            </h2>
 
             <ol>
-                <li>Enter your date of birth.</li>
-                <li>Click the "Calculate Age" button.</li>
-                <li>View your exact age and other results.</li>
+
+                <li>
+                    Enter your date of birth.
+                </li>
+
+                <li>
+                    Click the "Calculate Age" button.
+                </li>
+
+                <li>
+                    View your exact age and other results.
+                </li>
+
             </ol>
 
-            <h2>What Does the Calculator Show?</h2>
+
+            <h2>
+                What Does the Calculator Show?
+            </h2>
 
             <ul>
-                <li>Your age in years, months and days.</li>
-                <li>The day of the week you were born.</li>
-                <li>The number of days until your next birthday.</li>
-                <li>The approximate total number of days you have lived.</li>
+
+                <li>
+                    Your age in years, months and days.
+                </li>
+
+                <li>
+                    The day of the week you were born.
+                </li>
+
+                <li>
+                    The number of days until your next birthday.
+                </li>
+
+                <li>
+                    The approximate total number of days you have lived.
+                </li>
+
             </ul>
 
-            <h2>Frequently Asked Questions</h2>
 
-            <h3>How is age calculated?</h3>
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+
+            <h3>
+                How is age calculated?
+            </h3>
 
             <p>
                 Your age is calculated by comparing your date of birth
                 with the current date.
             </p>
 
-            <h3>Is this Age Calculator free?</h3>
+
+            <h3>
+                Is this Age Calculator free?
+            </h3>
 
             <p>
                 Yes. The calculator is designed to be free and easy to use.
             </p>
 
-            <h3>Can I use this calculator on my phone?</h3>
+
+            <h3>
+                Can I use this calculator on my phone?
+            </h3>
 
             <p>
                 Yes. The website is designed to work on phones, tablets
@@ -111,6 +215,11 @@
         </section>
 
     </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
 
     <script src="script.js"></script>
 

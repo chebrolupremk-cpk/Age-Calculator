@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Challenge 🧠</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Age Calculator</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="riddles.html">Riddles 🧠</a>
+            <a href="games.html">Mini Games 🎮</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </nav>
+
+    <main class="game-page">
+
+        <h1>🧠 Riddle Challenge</h1>
+
+        <div class="wallet">
+            🪙 Coins: <span id="coinCount">0</span>
+        </div>
+
+        <div class="difficulty-tabs">
+            <span>📚 Class 5: Riddles 1–20</span>
+            <span>🎓 Class 10: Riddles 21–40</span>
+            <span>🔥 Intermediate: Riddles 41–50</span>
+        </div>
+
+        <p class="riddle-progress" id="progress">
+            Solved: 0 / 50
+        </p>
+
+        <div class="riddle-card">
+
+            <div class="riddle-number" id="riddleNumber">
+                Riddle #1
+            </div>
+
+            <div class="difficulty-badge" id="difficulty">
+                Class 5
+            </div>
+
+            <div class="riddle-question" id="riddleQuestion">
+                Loading riddle...
+            </div>
+
+            <input
+                type="text"
+                id="answerInput"
+                class="riddle-input"
+                placeholder="Type your answer..."
+                autocomplete="off"
+            >
+
+            <div class="riddle-buttons">
+
+                <button
+                    id="submitAnswer"
+                    class="primary-btn"
+                    type="button"
+                >
+                    Submit Answer
+                </button>
+
+                <button
+                    id="hintButton"
+                    class="hint-btn"
+                    type="button"
+                >
+                    💡 Hint (-5 Coins)
+                </button>
+
+            </div>
+
+            <div
+                id="hintBox"
+                class="hint-box"
+                hidden
+            ></div>
+
+            <div
+                id="message"
+                class="riddle-message"
+            ></div>
+
+            <button
+                id="nextButton"
+                class="next-btn"
+                type="button"
+            >
+                Next Riddle ➡️
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="riddles.js"></script>
+
+</body>
+</html>
